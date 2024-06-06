@@ -1,0 +1,225 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0c0c0c; 
+  color: #fff; 
+}
+
+header {
+  padding: 20px 70px;
+  background-color: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header > nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header > nav > a {
+  margin-right: 40px;
+  text-decoration: none;
+}
+
+header > nav > a > img {
+  height: 100px;
+}
+
+header > nav > .button {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+  border: solid 3px #3498db; 
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+header > nav > .button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main > a {
+  text-decoration: none;
+  padding: 15px;
+  border: solid 2px #3498db;
+  border-radius: 10px;
+  margin: 50px 0px;
+  width: 400px;
+}
+
+
+main > a > div{
+  background-color: white;
+
+}
+
+.coming_soon{
+  background-color: #0c0c0c;
+}
+
+main > a > div > img {
+  height: 350px;
+  width: 400px;
+}
+
+main > a > div > .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3498db;
+}
+
+main > a > div > .card > #acquista > button {
+  background-color: white;
+  color: black;
+  border: solid 2px gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+main > a > div > .card > #acquista > button:hover{
+  cursor: pointer;
+}
+
+main > a > div > .card > #informazioni{
+  color: white;
+}
+
+
+footer{
+  width: 100%;
+  padding: 16px 0;  
+  margin-top: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+
+footer p {
+  margin: 10px 15px;
+}
+
+footer h2 {
+    color: #fff;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer h2:hover {
+    color: #3498db;
+}
+
+/*    GRAFICA      */ 
+
+.loader-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.loader{
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/*    MEDIA SCREEN */ 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  header > nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header > nav > a {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  main > a{
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  main > a > div > img{
+    width: 350px;
+    height: auto;
+  }
+
+  main > a > div > .card{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main > a > div > .card > #informazioni{
+    margin-top: 10px;
+  }
+
+  footer{
+    width: 100%;
+  }
+
+  footer > div{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
